@@ -1,0 +1,45 @@
+<view class="top_box">
+  <view class="top_box1">
+    <view class="title title1">本月提成</view>
+      <view class="image">
+        <view class="sum">{{userinfo.monthRoyalty}}</view>
+        <image src="{{userinfo.avatarUrl}}"></image>
+      </view>
+      <view class="title">
+        <view class="title2">
+            <view style="display:flex;">
+              <view style="width:141rpx;">本月总保费</view>
+              <view class="textSum" style="width: 180rpx;">{{userinfo.monthPremium}}</view>
+            </view>
+            <view class="segmentation"></view>
+            <view style="display:flex;">
+              <view style="width:168rpx;padding-left:50rpx">本月成交企业</view>
+              <view class="textSum">{{userinfo.monthCustomer==0?'暂无':userinfo.monthCustomer}}</view>
+            </view>
+        </view>
+      </view>
+    </view>
+  </view>
+<view class="bottom_box">
+  <view class="theme">我的提成</view>
+  <navigator wx:for="{{monthlist}}" wx:key="index" url="/pages/user/commissioninfo?month={{item.month}}">
+    <view class="bottom_list">
+      <view class="title">
+        <view>{{item.month}} 提成统计信息</view>
+        <image src="/images/right_icon.png"></image>
+      </view>
+      <view class="info">
+        <view class="info_l">
+          <view class="infotext">本月提成</view>
+          <view class="infosum color1">{{item.royalty}}</view>
+        </view>
+        <view class="segmentation2"></view>
+        <view class="info_r">
+          <view class="infotext">本月总保费</view>
+          <view class="infosum color2">{{item.premium}}</view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</view>
+<include src="/pages/tab/tab.wxml" />

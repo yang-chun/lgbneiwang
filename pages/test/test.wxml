@@ -1,0 +1,375 @@
+<view class="Increase">
+  <view class="Increase_title">昨日新增客户</view>
+  <view class="Increase_2">
+    <view class="count">6</view>
+    <view class="button">
+      <image src="../../images/add-icon.png"></image>
+      添加新用户
+    </view>
+  </view>
+  <view class="Increase_3">
+    <view class="left">
+      <view class="left_1">在保客户</view>
+      <view class="left_2">278</view>
+      <view class="left_3">
+        <view>日增长</view>
+        <view class="left_3_right">6%<image src="/images/top-arrow.png" class="top-arrow"></image></view>
+      </view>
+      <view class="left_3">
+        <view>周增长</view>
+        <view class="left_3_right">6%<image src="/images/top-arrow.png" class="top-arrow"></image></view>
+      </view>
+      <view class="left_3">
+        <view>周增长</view>
+        <view class="left_3_right">6%<image src="/images/top-arrow.png" class="top-arrow"></image></view>
+      </view>
+    </view>
+    <view class="right">
+      <view class="left_1">在保人数</view>
+      <view class="left_2">278</view>
+      <view class="left_3">
+        <view>日增长</view>
+        <view class="left_3_right">6%<image src="/images/top-arrow.png" class="top-arrow"></image></view>
+      </view>
+      <view class="left_3">
+        <view>周增长</view>
+        <view class="left_3_right">6%<image src="/images/top-arrow.png" class="top-arrow"></image></view>
+      </view>
+      <view class="left_3">
+        <view>周增长</view>
+        <view class="left_3_right">6%<image src="/images/top-arrow.png" class="top-arrow"></image></view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 表格部分 -->
+<view class="customer_list">
+  <view class="nav {{scrollTop>308 ? 'topnav' : ''}}" scroll-x="false" scroll-left="{{scrollLeft}}" >
+      <block wx:for="{{allTitle}}" wx:for-index="idx" wx:key="idex">
+        <view class="nav-item {{currentIndex==idx ? 'active' : ''}}" data-current="{{idx}}" bindtap="changeTitle">{{item.title}}</view>
+      </block>
+  </view>
+  <view style="position:absolute;" class="content-container {{scrollTop>308 ? 'topnav2' : ''}}" current="{{currentIndex}}" circular="{{false}}" bindchange="changeContent">
+    <view  style=" {{currentIndex==0 ? '' : 'display:none'}}">
+      <view class="title">成交未投保25698</view>
+      <view class="table">
+        <view class="tr">
+          <view class="th serial">序号</view>
+          <view class="th" style="width: 234rpx;padding-left:22rpx;padding-right:22rpx;">公司名</view>
+          <view class="th number">在保人数 </view>
+          <view class="th time">开户时间</view>
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">12121212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">12121212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">12121212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">12121212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">12121212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+      </view>
+    </view>
+    <view  style=" {{currentIndex==1 ? '' : 'display:none'}}">
+      <view class="title">未在保客户25698</view>
+      <view class="table">
+        <view class="tr">
+          <view class="th serial">序号</view>
+          <view class="th" style="width: 234rpx;padding-left:22rpx;padding-right:22rpx;">公司名</view>
+          <view class="th number">在保人数 </view>
+          <view class="th time">开户时间</view>
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+      </view>
+    </view>
+    <view  style=" {{currentIndex==2 ? '' : 'display:none'}}">
+      <view class="title">总客户25698</view>
+      <view class="table">
+        <view class="tr">
+          <view class="th serial">序号</view>
+          <view class="th" style="width: 234rpx;padding-left:22rpx;padding-right:22rpx;">公司名</view>
+          <view class="th number">在保人数 </view>
+          <view class="th time">开户时间</view>
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">1212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">12121212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">12121212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">12121212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">12121212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+        <view class="tr">
+          <view class="td serial">1</view>
+          <navigator class="td company" url="/pages/customer/companyinfo" >苏州三大幅度发发生分高达</navigator>
+          <view class="td number">12121212</view>
+          <view class="td time">2019.05.06</view>  
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

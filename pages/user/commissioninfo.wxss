@@ -1,0 +1,71 @@
+/* pages/user/userinfo.wxss */
+page{
+  background: #F8F8F8;
+}
+.bottom_box{
+  margin-top: 48rpx;
+}
+
+.theme{
+  color: #1C1C1C;
+  font-weight:800;
+  font-size:36rpx;
+}
+
+.bottom_list{
+  /* width: 630rpx; */
+  height: 260rpx;
+  margin-top:24rpx;
+  background: #fff;
+  padding-left: 60rpx;
+  padding-right: 24rpx;
+}
+
+.bottom_list .title{
+  padding-top:33rpx;
+  font-size:32rpx;
+  font-weight:800;
+  color: #1C1C1C;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom_list image{
+  width: 29rpx;
+  height: 29rpx;
+  float: right;
+  margin: auto 0;
+}
+
+.info{
+  display: flex;
+  padding-top:24rpx;
+}
+
+.infotext{
+  font-size:28rpx;
+  font-weight:500;
+  color: #1C1C1C;
+}
+
+.infosum{
+  font-size:40rpx;
+  font-weight:800;
+}
+
+.info_l{
+  width: 278rpx;
+}
+
+.segmentation2{
+  width: 2rpx;
+  height: 64rpx;
+  background: #B4B4B4;
+  margin: auto 0;
+}
+
+.info_r{
+  margin-left: 85rpx;
+  width: 278rpx;
+}
+

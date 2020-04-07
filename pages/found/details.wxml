@@ -1,0 +1,108 @@
+<view class="box" catchtap="onHideInput" wx:if="{{showInput}}"></view>
+<form bindsubmit="formSubmit">
+  <view class="inputBox" style="bottom:{{bottom}}px;padding-bottom:{{bottom?'':'30rpx'}}"  wx:if="{{showInput}}">
+      <textarea class="input"
+      auto-height="{{auto_height}}"
+      adjust-position="{{false}}" 
+      type='text'       
+      show-confirm-bar="{{false}}"
+      cursor-spacing="100"
+      bindfocus='onbindfocus'
+      focus="auto"
+      auto-focus="true"
+      bindblur="blur"
+      maxlength="-1"
+      bindlinechange="linechange"
+      placeholder="{{nickname?nickname:'发表评论：'}}"
+      name="comment_count"
+      value="{{commentText}}"
+      bindinput="getCommentValue" 
+      placeholder-style='color:#9a9a9a;' />
+      <view class="operation_box" style="{{bottom?'':'bottom:30rpx'}}">
+        <view class="emoji iconfont icon-biaoqing" catchtap="onEmoji" data-footheight="{{footHeight}}"></view>
+      <button formType="submit" class="send_btn">
+        <text class="send_btn_text" >发送</text>
+      </button>
+      </view>
+  </view>
+  <view class="footer" style="height:{{footHeight}}rpx">
+    <view class="emoji_box" style="height:{{emojiHetght}}rpx"  >
+        <scroll-view class="scro_box" scroll-y="true" enable-flex="true" catchtouchmove="true">
+            <block wx:for="{{emojis}}" wx:key="index">
+                <view class="char_box" catchtap="emojiBtn" data-i="{{index}}">{{item}}</view>
+            </block>
+            <view wx:if="{{emojiHetght}}" class="iconfont icon-cha delete_icon" bindtap="deleteContent"></view>
+        </scroll-view>
+    </view>
+  </view>
+</form>
+  <view class="cont_box">
+    <!-- 帖子详情 -->
+    <view class="list_box">
+      <view class="user_info" >
+        <image class="list_portrait" src="{{list.user.avatarUrl}}" mode="aspectFill"></image>
+        <view class="name">{{list.user.nickName}}</view>
+        <view wx:if="{{list.can_delete == 1}}" class="delete" catchtap="deleteWweibo" data-weibo_id="{{list.weibo_id}}">删除</view>
+      </view>
+      <view class="list_cont">
+        <view class="content {{list.content.length > 76 && !list.show ?'hide':''}}" id="getheight">
+          <text style="color:#03AD8F" wx:if="{{list.topic}}">#{{list.topic.name}}#</text>{{list.content}}
+        </view>
+        <view wx:if="{{list.content.length > 76}}" class="more" catchtap="more">{{list.show?'收起':'查看更多...'}}</view>
+        <view class="list_image">
+            <view wx:if="{{list.image.length == 1}}">
+            <image bindtap="previewImages" wx:for="{{list.image}}" wx:for-item="image" wx:key="index" class="one_image" mode="aspectFill" src="{{image.file_path}}" data-image="{{list.image}}"  mode="widthFix"></image>
+            </view>
+            <view wx:else>
+              <image bindtap="previewImages" wx:for="{{list.image}}" wx:for-index="idx" wx:for-item="image" wx:key="idx" class="more_image" mode="aspectFill" src="{{image.file_path}}" data-idx="{{idx}}" data-index="{{index}}" data-image="{{list.image}}"></image>
+            </view>
+        </view>
+        <view class="operation">
+          <button hover-class="none" class="iconfont icon-fenxiang text" open-type='share' data-id="{{list.weibo_id}}">
+            <text></text>
+          </button>
+          <view class="iconfont icon-bianji text" bindtap="showInput" data-weibo_id="{{list.weibo_id}}">
+            <text>{{list.comment_count}}</text>
+          </view>
+          <view class="iconfont icon-dianzan praise" style="{{list.is_zan==0?'':'color:#f00'}}" catchtap="praise" data-zan="{{list.is_zan}}" data-id="{{list.weibo_id}}">
+            <text>{{list.zan_count}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+    <!-- 评论 -->
+  <view class="comments_box" bindscrolltolower="bindDownLoad" bindscroll="bindscroll">
+    <view class="title">全部回复（{{total}}）</view>
+    <view class="clist_box">
+      <view class="clist" wx:for="{{lists}}" wx:key="index">
+        <image class="images" src="{{item.user.avatarUrl}}" mode="aspectFill"></image>
+        <view class="clist_info">
+          <view>
+            <view class="clist_name">{{item.user.nickName}}</view>
+            <view class="clist_date">{{item.friendly_date}}</view>
+          </view>
+          <view wx:if="{{item.can_delete == 1}}"  class="CommentsDelete" catchtap="deleteComments" data-weibo_id="{{item.weibo_id}}" data-comment_id="{{item.comment_id}}" data-index="{{index}}">删除</view>
+
+        </view>
+        <view class="clist_text" bindtap="showInput" data-weibo_id="{{item.weibo_id}}" data-nickName="{{item.user.nickName}}" data-comment_id="{{item.comment_id}}">
+          <text wx:if="{{item.to_user != null}}" >
+            <text>回复</text>
+            <text class="clist_user_name" >@{{item.to_user.nickName}}：</text>
+          </text>
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+
+      <view style="background:#fff;color:#bbb;padding-bottom:20rpx;padding-top:20rpx;font-size:28rpx;text-align:center;"><text></text>
+        <view wx:if="{{lists.length == 0}}">
+          暂无评论
+        </view>
+        <view wx:else>
+          <text wx:if="{{len == total}}">没有更多了</text>
+          <text wx:else>加载中...</text>
+          <!-- <text wx:else>加载中...</text> -->
+        </view>
+      </view>
+    </view>
+  </view>

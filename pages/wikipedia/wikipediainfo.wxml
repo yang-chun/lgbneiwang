@@ -1,0 +1,13 @@
+<view class='page_box'>
+  <view class="theme">{{title}}</view>
+  <view wx:for="{{list}}" wx:key="index">
+    <view class="list">
+      <image src="{{uhide==index?'/images/common_btn_shou_s.png':'/images/common_btn_suo_n.png'}}"  bindtap="tigger" data-num="{{index}}"></image>
+      <view class="title"  bindtap="tigger" data-num="{{index}}">{{item.question}}</view>
+    </view>
+    <view selectable="true"  class="url-txt details {{uhide==index?'':'hidden'}}">
+    <text>{{item.answer}}</text>
+    <view style="color:#03AD8F;margin-top:20rpx;"  bindtap='copyText' data-text="{{item.answer}}">复制</view>
+    </view>
+  </view>
+</view>

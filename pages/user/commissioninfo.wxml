@@ -1,0 +1,24 @@
+<scroll-view  bindscrolltolower="bindDownLoad"  scroll-y style="height: {{scrollHeight}}px;">
+  <view class="bottom_box">
+      <view wx:for="{{list}}" wx:key="index" class="bottom_list">
+        <view class="title">
+          <view>{{item.company_name}}</view>
+        </view>
+        <view class="info">
+          <view class="info_l">
+            <view class="infotext">提成</view>
+            <view class="infosum color1">{{item.royalty}}</view>
+          </view>
+          <view class="segmentation2"></view>
+          <view class="info_r">
+            <view class="infotext">总保费</view>
+            <view class="infosum color2">{{item.premium}}</view>
+          </view>
+        </view>
+      </view>
+      <view style="background:#fff;color:#bbb;padding-bottom:20rpx;padding-top:20rpx;font-size:28rpx;text-align:center;">
+        <text wx:if="{{no_more == true}}">没有更多了</text>
+        <text wx:elif="{{len >=1 || len2 == 15}}">加载中</text>
+      </view>
+  </view>
+</scroll-view>

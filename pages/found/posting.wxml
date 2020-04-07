@@ -1,0 +1,38 @@
+<view wx:if="{{magicSwitch==1}}">
+  <include src="/pages/wikipedia/wikipedia" />
+</view>
+<view wx:elif="{{magicSwitch===0}}">
+  <view class="top"></view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="text_box">
+      <form>
+        <textarea name="content" maxlength="-1" placeholder="大家都是朋友，请开始你的表演…" placeholder-class="placeholder_text" value="">
+        </textarea>
+          <view class="goods-item">
+            <view class="image-list">
+              <view class="image-preview" wx:for="{{formData.image_list}}" wx:for-index="imageIndex" wx:for-item="imagePath" wx:key="this">
+                <text class="image-delete iconfont icon-shanchu" catchtap="deleteImage" data-index="{{index}}" data-image-index="{{imageIndex}}">×</text>
+                <image mode="aspectFill" src="{{ imagePath }}"></image>
+              </view>
+              <view bindtap="chooseImage" class="image-picker dis-flex flex-dir-column flex-x-center flex-y-center" data-index="{{index}}" wx:if="{{ !formData.image_list || formData.image_list.length < 9 }}">
+                <!-- <text class="choose__icon iconfont icon-tubiao_xiangji"></text> -->
+                <image src="/images/jia.png"></image>
+              </view>
+            </view>
+          </view>
+      </form>
+      <view class="label_box">
+        <text>#</text>
+        <text class="theme">选择主题</text>
+        <view class="label_list">
+          <view class="label {{topic_id===item.topic_id?'selected':''}}" wx:for="{{topicLists}}"  wx:key="index" bindtap="label" data-topic_id="{{item.topic_id}}" data-topic_cont="{{item.name}}">{{item.name}}</view>
+          <!-- <view class="label">委员会</view>
+          <view class="label">销售中心</view>
+          <view class="label">客服中心</view>
+          <view class="label">健委会</view> -->
+        </view>
+      </view>
+    </view>
+    <button formType="submit" size="default" class="button">发布</button>
+  </form>
+</view>

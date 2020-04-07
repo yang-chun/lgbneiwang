@@ -1,0 +1,113 @@
+<view wx:if="{{magicSwitch==1}}">
+  <include src="/pages/wikipedia/wikipedia" />
+</view>
+<view wx:elif="{{magicSwitch===0}}" bindscroll="bindscroll" id="bottom" style="height: {{scrollHeight}}px;" >
+  <view class="top_box">
+    <view class="top margin">
+      <image class="portrait" src="/images/logo.jpg" mode="aspectFill"></image>
+      <view class="info_box">
+        <view class="name">
+          蓝工保内网
+          <!-- <navigator url="/pages/wikipedia/wikipedia" class="answer">
+            <view class="iconfont icon-taolunqu"></view>
+            <view>百问百答</view>
+          </navigator> -->
+        </view>
+        <!-- <view class="traffic">
+          <text>关注 {{statNumbers.person_count}}</text>
+          <text>帖子 {{statNumbers.weibo_count}}</text>
+        </view> -->
+      </view>
+    </view>
+  </view>
+  <view class="cont_box">
+    <view class="nav">
+      <view class="title_box"  bindtap="nav" data-nav='1'>
+        <view class="title">帖子</view>
+        <view class="{{nav == 1?'titleLine':''}}"></view>
+      </view>
+      <view class="title_box" bindtap="nav" data-nav='2'>
+        <view class="title" >成员</view>
+        <view class="{{nav == 2?'titleLine':''}}"></view>
+      </view>
+    </view>
+    <!-- 帖子 -->
+    <view wx:if="{{nav == 1}}">
+      <navigator url="/pages/found/message" hover-class="none" class="message_box" wx:if="{{statNumbers.unread_count > 0}}">
+        <view class="message">
+          <view class="num">{{statNumbers.unread_count}}</view>
+          <view class="msg">消息未回复</view>
+        </view>
+      </navigator>
+      <view class="label_box">
+        <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex;height:100rpx;" >
+          <view class="label {{topic_id==0?'all':''}}" bindtap="label" data-topic_id="0">全部</view>
+          <view class="label {{topic_id===item.topic_id?'all':''}}"  bindtap="label" data-topic_id="{{item.topic_id}}" wx:for="{{topicLists}}" wx:key="index" >{{item.name}}</view>
+        </scroll-view>
+      </view>
+      <view class="list_box" wx:for="{{list}}" wx:key="index" data-id='{{index}}'>
+        <view class="user_info" >
+          <image class="list_portrait" src="{{item.user.avatarUrl}}" mode="aspectFill"></image>
+          <view class="name_box">
+            <view class="name">{{item.user.nickName}}</view>
+            <view  class="release_date">{{item.friendly_date}}</view>
+          </view>
+          <view wx:if="{{item.can_delete == 1}}" class="delete" catchtap="deleteWeibo" data-weibo_id="{{item.weibo_id}}" data-index="{{index}}">删除</view>
+        </view>
+        <view class="list_cont">
+          <navigator url="/pages/found/details?weibo_id={{item.weibo_id}}" hover-class="none" class="content" id="getheight">
+            <view class="{{item.content.length > 76 && !item.show ?'hide':''}}"><text style="color:#03AD8F" wx:if="{{item.topic}}">#{{item.topic.name}}#</text>{{item.content}}</view>
+                        <view wx:if="{{item.content.length > 76}}" class="more" catchtap="more" data-id='{{index}}'>{{item.show?'收起':'查看更多...'}}</view>
+            <view class="list_image">
+                <view wx:if="{{item.image.length == 1}}">
+                <image catchtap ="previewImages" wx:for="{{item.image}}" style="width:50%" wx:for-item="image" wx:key="index" class="one_image" mode="aspectFill" src="{{image.file_path}}" data-index="{{index}}" data-image="{{item.image}}"  mode="widthFix"></image>
+                </view>
+                <view wx:else>
+                  <image catchtap ="previewImages" wx:for="{{item.image}}" wx:for-index="idx" wx:for-item="image" wx:key="idx" class="more_image" mode="aspectFill" src="{{image.file_path}}" data-idx="{{idx}}" data-index="{{index}}" data-image="{{item.image}}"></image>
+                </view>
+            </view>
+          </navigator>
+          <view class="operation">
+            <button hover-class="none"  open-type='share' class="iconfont icon-fenxiang text" bindtap="onShareAppMessage()" data-id="{{item.weibo_id}}">
+              <text></text>
+            </button>
+            <navigator hover-class="none" url="/pages/found/details?weibo_id={{item.weibo_id}}&showInput=true" class="iconfont icon-bianji text" style="line-height: 40rpx;">
+              <text>{{item.comment_count}}</text>
+            </navigator>
+            <button hover-class="none" class="iconfont icon-dianzan praise" style="{{item.is_zan==0?'':'color:#f00'}}" catchtap="praise" data-zan="{{item.is_zan}}" data-id="{{item.weibo_id}}" data-index="{{index}}">
+              <text>{{item.zan_count}}</text>
+            </button>
+          </view>
+        </view>
+      </view>
+      <!-- 编辑悬浮框 -->
+      <navigator hover-class="none" url="/pages/found/posting" class="edit iconfont icon-chuangzuo"></navigator>
+      <view style="background:#fff;color:#bbb;padding-bottom:20rpx;padding-top:20rpx;font-size:28rpx;text-align:center;">
+        <text wx:if="{{isLoading == true}}">加载中..</text>
+        <text wx:elif="{{len == false}}">没有更多了</text>
+        <text wx:else>加载中..</text>
+      </view>
+    </view>
+
+    <!-- 社区 -->
+    <view  wx:if="{{nav == 2}}">
+      <view class="community_list" wx:for="{{communityList}}" wx:key="index">
+        <image class="list_portrait"  src="{{item.user.avatarUrl}}" mode="aspectFill"></image>
+        <view class="user_info">
+          <view class="name">
+            <view class="user_name">{{item.name}}</view>
+            <view class="phone iconfont icon-dianhua1 {{item.mobile?'phoneyes':'phoneno'}}" bindtap="callem" data-mobile="{{item.mobile}}"></view>
+          </view>
+          <view class="info">{{item.position}}</view>
+        </view>
+      </view>
+      <view style="background:#fff;color:#bbb;padding-bottom:20rpx;padding-top:20rpx;font-size:28rpx;text-align:center;">
+        <text wx:if="{{isLoading == true}}">加载中</text>
+        <text wx:elif="{{len == false}}">没有更多了</text>
+        <text wx:else>加载中</text>
+      </view>
+    </view>
+  </view>
+</view>
+<include src="/pages/tab/tab.wxml" />
+<import src="/pages/tab/tab.wxml" />

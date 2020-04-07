@@ -1,0 +1,15 @@
+/* pages/none/none.wxss */
+image {
+  width: 255rpx;
+  height: 255rpx;
+  margin-top: 350rpx;
+  margin-left: 255rpx;
+}
+
+.text{
+  font-size:32rpx;
+  font-weight:500;
+  margin-top: 36rpx;
+  text-align: center;
+  color: #C0C0C0;
+}

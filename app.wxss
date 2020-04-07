@@ -1,0 +1,85 @@
+@import "/lib/style/font.wxss";
+page{
+  background: #F8F8F8;
+}
+
+.fl{
+  float: left;
+}
+.fr{
+  float:right;
+}
+
+.margin_left36{
+  margin-left: 36rpx;
+  margin-top: 46rpx;
+}
+
+.margin_right36{
+  margin-right: 36rpx;
+  margin-top: 46rpx;
+}
+
+.color1{
+  color:#03AD8F;
+}
+.color2{
+  color: #D14B64;
+}
+.color3{
+  color: #1C1C1C;
+}
+.color4{
+ color: #F0A441;
+}
+
+
+.margin{
+  margin-left: 36rpx;
+  margin-right: 36rpx;
+}
+
+.padding{
+  padding-left: 36rpx;
+  padding-right: 36rpx;
+}
+
+
+.tab_box{
+  position: fixed;
+  /* height: 99rpx; */
+  width: 100%;
+  background: #FFFFFF;
+  border-top: 1rpx solid #E9E6EA;
+  bottom: 0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.tab_box .tab{
+    width: 33%;
+    font-size: 20rpx;
+    text-align: center;
+    padding: 6rpx 0;
+}
+.tab_msg{
+  width: 30rpx;
+  height: 30rpx;
+  background: #D14B64;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 30rpx;
+  text-align: center;
+  position:absolute;
+  right:94rpx
+}
+.tab_box image{
+  width: 54rpx;
+  height: 54rpx;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

@@ -1,0 +1,32 @@
+<!-- <view class="index_box">
+  <navigator url="/pages/wikipedia/wikipediainfo?title=关于保单问题&category_id=1" >
+    <image src="/images/wenda_bg_1_n.png" class="fl margin_left36">
+      <text>关于保单问题</text>
+    </image>
+  </navigator>
+  <navigator url="/pages/wikipedia/wikipediainfo?title=费用和发票问题&category_id=2" >
+    <image src="/images/wenda_bg_2_n.png" class="fr margin_right36">
+      <text>费用和发票问题</text>
+    </image>
+  </navigator>
+  <navigator url="/pages/wikipedia/wikipediainfo?title=关于投保退保&category_id=3" >
+    <image src="/images/wenda_bg_3_n.png" class="fl margin_left36">
+      <text>关于投保退保</text>
+    </image>
+  </navigator>
+  <navigator url="/pages/wikipedia/wikipediainfo?title=关于协议问题&category_id=4" >
+    <image src="/images/wenda_bg_4_n.png" class="fr margin_right36">
+      <text>关于协议问题</text>
+    </image>
+  </navigator>
+  <navigator url="/pages/wikipedia/wikipediainfo?title=关于理赔问题&category_id=5" >
+    <image src="/images/wenda_bg_5_n.png" class="fl margin_left36">
+      <text>关于理赔问题</text>
+    </image>
+  </navigator>
+  <navigator url="/pages/wikipedia/wikipediainfo?title=其他问题&category_id=6" >
+    <image src="/images/wenda_bg_6_n.png" class="fr margin_right36">
+      <text>其他问题</text>
+    </image>
+  </navigator>
+</view> -->

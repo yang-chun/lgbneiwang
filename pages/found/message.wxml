@@ -1,0 +1,32 @@
+<view class="list_box"  bindscroll="bindscroll" id="bottom" style="height: {{scrollHeight}}px;">
+  <navigator hover-class="none" url="/pages/found/details?weibo_id={{item.weibo_id}}" class="list" wx:for="{{list}}" wx:key="index">
+    <image class="portrait" src="{{item.from_user.avatarUrl}}" mode="aspectFill"></image>
+      <view class="list_info">
+        <view class="list_name">{{item.from_user.nickName}}</view>
+        <view class="list_date">{{item.friendly_date}}</view>
+        <view class="comments_cont">{{item.content}}</view>
+      </view>
+      <view class="post_cont">{{item.weibo.content}}</view>
+  </navigator>
+  <!-- <view class="list">
+    <image class="portrait" src="/images/logo.jpg" mode="aspectFill"></image>
+      <view class="list_info">
+        <view class="list_name">权志龙</view>
+        <view class="list_date">1分钟前</view>
+        <view class="comments_cont">我是评论内容,我只是一个测试你们想对我怎么样.</view>
+      </view>
+      <view class="post_cont">
+      <image class="post_image" src="/images/logo.jpg" mode="aspectFill"></image>
+      </view>
+  </view> -->
+      <view style="background:#fff;color:#bbb;padding-bottom:20rpx;padding-top:20rpx;font-size:28rpx;text-align:center;"><text></text>
+        <view wx:if="{{lists.length == 0}}">
+          暂无内容
+        </view>
+        <view wx:else>
+          <text wx:if="{{len == total}}">没有更多了</text>
+          <text wx:else>加载中...</text>
+          <!-- <text wx:else>加载中...</text> -->
+        </view>
+      </view>
+</view>

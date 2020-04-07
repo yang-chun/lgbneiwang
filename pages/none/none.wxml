@@ -1,0 +1,4 @@
+<view class="common_empty">
+  <image src="/images/common_empty.png"></image>
+  <view class="text">您的账号未绑定业务员o(╥﹏╥)o</view>
+</view>

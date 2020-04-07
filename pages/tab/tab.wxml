@@ -1,0 +1,15 @@
+<view class="tab_box">
+  <view  class="tab" bindtap='navigation' data-tabindex="0" style="position:relative">
+    <view wx:if="{{statNumbers.unread_count > 0}}" class="tab_msg">{{statNumbers.unread_count}}</view>
+    <image src="{{tabindex==0?'/images/found_s.png':'/images/found_n.png'}}"></image>
+    <view>发现</view>
+  </view>
+  <view class="tab" bindtap='navigation' data-tabindex="1">
+    <image src="{{tabindex==1?'/images/common_tab_shuju_s.png':'/images/common_tab_shuju_n.png'}}"></image>
+    <view>数据</view>
+  </view>
+  <view class="tab" bindtap='navigation' data-tabindex="2">
+    <image src="{{tabindex==2?'/images/common_tab_me_s.png':'/images/common_tab_me_n.png'}}"></image>
+    <view>我的</view>
+  </view>
+</view>

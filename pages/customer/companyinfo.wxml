@@ -1,0 +1,38 @@
+
+<scroll-view  bindscrolltolower="bindDownLoad"  scroll-top='{{topNum}}'  scroll-y style="height: {{scrollHeight}}px;">
+  <view class="index_box">
+    <view class="info" style="border-top: 0rpx dashed #BFC7C5;padding-top:10rpx;">
+      <text class="info_l">客户名称</text>
+      <text class="info_r">{{company_name}}</text>
+    </view>
+
+    <view class="info">
+      <text class="info_l">联系人</text>
+      <text class="info_r">{{contact}}</text>
+    </view>
+    <view class="info">
+      <text class="info_l">联系电话</text>
+      <text class="info_r" bindtap="callem">{{mobile}}</text>
+    </view>
+    <view class="info">
+      <text class="info_l">在保总人数</text>
+      <text class="info_r">{{activated_persons}}</text>
+    </view>
+  </view>
+  <view class="table">
+    <view class="tr">
+      <view class="th company">类型</view>
+      <view class="th number">人数</view>
+      <view class="th time">时间</view>
+    </view>
+    <view class="tr" wx:for="{{list}}" wx:key="index">
+      <view class="td company {{item.type=='减保'?'color2':'color1'}}">{{item.type}}</view>
+      <view class="td number">{{item.persons}}</view>
+      <view class="td time">{{item.start_date}}</view>  
+    </view>
+    <view style="background:#fff;color:#bbb;padding-bottom:20rpx;padding-top:20rpx;font-size:28rpx;text-align:center;">
+      <text wx:if="{{no_more == true}}">没有更多了</text>
+      <text wx:elif="{{len >=1 || len2 == 15}}">加载中</text>
+    </view>
+  </view>
+</scroll-view>

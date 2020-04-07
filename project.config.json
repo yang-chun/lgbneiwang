@@ -1,0 +1,143 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": false,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.3",
+	"appid": "wxf3651782fd08370d",
+	"projectname": "%E8%93%9D%E5%B7%A5%E4%BF%9D%E5%86%85%E7%BD%91",
+	"cloudfunctionTemplateRoot": "",
+	"watchOptions": {
+		"ignore": []
+	},
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/customer/companyinfo",
+					"pathName": "pages/customer/companyinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "百科",
+					"pathName": "pages/wikipedia/wikipedia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "百科详情",
+					"pathName": "pages/wikipedia/wikipediainfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/user/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "pages/test/test",
+					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/customer/customer",
+					"pathName": "pages/customer/customer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/customer/companyinfo",
+					"pathName": "pages/customer/companyinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发现",
+					"pathName": "pages/found/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "帖子详情",
+					"pathName": "pages/found/details",
+					"query": "weibo_id=",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发布帖子",
+					"pathName": "pages/found/posting",
+					"query": "weibo_id=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "消息列表",
+					"pathName": "pages/found/message",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

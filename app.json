@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/found/index",
+    "pages/found/details",
+    "pages/found/posting",
+    "pages/found/message",
+    "pages/customer/customer",
+    "pages/wikipedia/wikipedia",
+    "pages/user/index",
+    "pages/user/commissioninfo",
+    "pages/customer/companyinfo",
+    "pages/wikipedia/wikipediainfo",
+    "pages/test/test",
+    "pages/login/login",
+    "pages/none/none"
+],
+"window": {
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "自定义底部导航栏",
+  "navigationBarTextStyle": "black"
+},
+"tabBar": {
+  "color": "#1C1C1C",
+  "selectedColor": "#03AD8F",
+  "backgroundColor": "#fff",
+  "list": [
+    {
+        "pagePath": "pages/found/index",
+        "text": "发现",
+        "iconPath": "images/found_n.png",
+        "selectedIconPath": "images/found_s.png"
+    },
+    {
+        "pagePath": "pages/customer/customer",
+        "text": "数据",
+        "iconPath": "images/common_tab_shuju_n.png",
+        "selectedIconPath": "images/common_tab_shuju_s.png"
+    },
+    {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "images/common_tab_me_n.png",
+        "selectedIconPath": "images/common_tab_me_s.png"
+    }
+  ]
+},
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

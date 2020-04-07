@@ -1,0 +1,96 @@
+<view bindscrolltolower="bindDownLoad" bindscroll="bindscroll" id="bottom" style="height: {{scrollHeight}}px;">
+<view class="Increase">
+  <view class="Increase_title">
+    <view class="image">
+      <image src="/images/data-icon.png"></image>
+    </view>
+    <text>个人销售总计</text>
+  </view>
+  <view class="Increase_2">
+    <view class="left">
+      <view class="title">在保人数</view>
+      <view class="number">{{activated_persons}}</view>
+    </view>
+    <view class="right">
+      <view class="title">客户数</view>
+      <view class="number">{{activated_customers}}</view>
+    </view>
+  </view>
+  <view class="Increase_2">
+    <view class="left">
+      <view class="title">昨日投保人数</view>
+      <view class="number">{{in_yesterday}}</view>
+    </view>
+    <view class="right">
+      <view class="title">昨日退保人数</view>
+      <view class="number" style="color:#D14B64;">{{out_yesterday}}</view>
+    </view>
+  </view>
+</view>
+<!-- 表格部分 -->
+  <view class="customer_list">
+    <view class="nav {{scrollTop>240 ? 'topnav' : ''}}" scroll-x="false" scroll-left="{{scrollLeft}}" >
+        <block wx:for="{{allTitle}}" wx:for-index="idx" wx:key="idex">
+          <view class="nav-item {{currentIndex==idx ? 'active' : ''}}" data-current="{{idx}}" bindtap="changeTitle">{{item.title}}</view>
+        </block>
+    </view>
+    <view style="" class="content-container {{scrollTop>240 ? 'topnav2' : ''}}" current="{{currentIndex}}" circular="{{false}}" bindchange="changeContent">
+  <view wx:if="{{isLoading == false}}">
+    <view style="{{currentIndex==0 ? '' : 'display:none'}}">
+        <view class="title"></view>
+        <view class="table">
+          <view class="tr">
+            <view class="th serial">序号</view>
+            <view class="th" style="width: 419rpx;padding-left:22rpx;padding-right:22rpx;">公司名</view>
+            <view class="th time">开户时间</view>
+          </view>
+          <view class="tr" wx:for="{{list}}" wx:key="index">
+            <view class="td serial">{{index+1}}</view>
+            <navigator class="td company1" url="/pages/customer/companyinfo?id={{item.customer_id}}" >{{item.company_name}}</navigator>
+            <view class="td time">{{item.create_time}}</view>  
+          </view>
+        </view>
+      </view>
+      <view  style=" {{currentIndex==1 ? '' : 'display:none'}}">
+        <view class="table">
+          <view class="tr">
+            <view class="th serial">序号</view>
+            <view class="th" style="width: 234rpx;padding-left:22rpx;padding-right:22rpx;">公司名</view>
+            <view class="th number">在保人数 </view>
+            <view class="th time">开户时间</view>
+          </view>
+          <view class="tr" wx:for="{{list}}" wx:key="index">
+            <view class="td serial">{{index+1}}</view>
+            <navigator class="td company" url="/pages/customer/companyinfo?id={{item.customer_id}}" >{{item.company_name}}</navigator>
+            <view class="td number">{{item.activated_persons}}</view>
+            <view class="td time">{{item.create_time}}</view>  
+          </view>    
+        </view>
+      </view>
+
+      <view  style=" {{currentIndex==2 ? '' : 'display:none'}}">
+        <view class="table">
+          <view class="tr">
+            <view class="th serial">序号</view>
+            <view class="th" style="width: 234rpx;padding-left:22rpx;padding-right:22rpx;">公司名</view>
+            <view class="th number">在保人数 </view>
+            <view class="th time">开户时间</view>
+          </view>
+          <view class="tr" wx:for="{{list}}" wx:key="index">
+            <view class="td serial">{{index+1}}</view>
+            <navigator class="td company" url="/pages/customer/companyinfo?id={{item.customer_id}}" >{{item.company_name}}</navigator>
+            <view class="td number">{{item.activated_persons}}</view>
+            <view class="td time">{{item.create_time}}</view>  
+          </view>   
+        </view>
+      </view>
+    </view>
+  </view>
+      <view style="background:#fff;color:#bbb;padding-bottom:20rpx;padding-top:20rpx;font-size:28rpx;text-align:center;">
+        <text wx:if="{{isLoading == true}}">加载中</text>
+        <text wx:elif="{{len == false}}">没有更多了</text>
+        <text wx:else>加载中</text>
+      </view>
+  </view>
+</view>
+<include src="/pages/tab/tab.wxml" />

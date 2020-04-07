@@ -1,0 +1,285 @@
+/* pages/customer/customer.wxss */
+page{
+  background: #F8F8F8;
+}
+
+.Increase{
+  width: 100%;
+  height: 600rpx;
+  background: #fff;
+}
+.Increase_title{
+  font-size: 32rpx;
+  width:192rpx;
+  height:45rpx;
+  color:rgba(60,60,60,1);
+  padding: 36rpx 36rpx 0 36rpx;
+}
+.flex-wrp {
+  display: flex;
+}
+
+.Increase_2 .count{
+  width:49rpx;
+  height:115rpx;
+  font-size:82rpx;
+  margin-left: 36rpx;
+  float: lefr;
+  font-weight:800;
+  color: #03AD8F;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Increase_2{
+  display:-webkit-flex;
+  justify-content: space-between;
+  display: flex;
+}
+.Increase_2 .button{
+  width:282rpx;
+  height:96rpx;
+  border-radius:48rpx;
+  color: #666666;
+  font-size:32rpx;
+  font-weight: 500;
+  line-height: 96rpx;
+  background: #C2C2C2;
+  display: flex;
+  margin-right: 36rpx;
+}
+
+.Increase_2 image{
+  width: 44rpx;
+  height: 44rpx;
+  margin:auto 0;
+  margin-left: 30rpx;
+  margin-right:10rpx;
+}
+
+.Increase_3{
+  width: 678rpx;
+  display: flex;
+  margin: 0 auto;
+  margin-top:42rpx;
+}
+
+.Increase_3 .left{
+  width: 320rpx;
+  height: 312rpx;
+  border: 1px solid #C2C2C2;
+}
+
+.Increase_3 .right{
+  width: 320rpx;
+  height: 312rpx;
+  margin-left: 38rpx;
+  border: 1px solid #C2C2C2;
+}
+
+.Increase_3 .left_1{
+  font-size: 24rpx;
+  font-weight:500;
+  color: #C0C0C0;
+  margin-left: 16rpx;
+  margin-top: 16rpx;
+}
+
+.Increase_3 .left_2{
+  font-size: 36rpx;
+  font-weight:800;
+  color:#1C1C1C;
+  margin-left: 16rpx;
+}
+
+.Increase_3 .left_3{
+  font-size: 28rpx;
+  font-weight:500;
+  margin: 16rpx;
+  color: #3C3C3C;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left_3_right{
+  color: #1C1C1C;
+  font-weight:bold;
+  float: right;
+}
+
+.left_3_right .top-arrow{
+  width: 30rpx;
+  height: 36rpx;
+  margin-left: 5rpx;
+}
+
+
+/* 客户列表 */
+.customer_list{
+  width: 100%;
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.title_box {
+  width: 100%;
+  height: 104rpx;
+  display: flex;
+  border-bottom: 1px solid #B4B4B4;
+}
+.title_box view{
+  line-height: 104rpx;
+  margin-right: 80rpx;
+  font-size:28rpx;
+  font-weight:500;
+  color: #3C3C3C;
+}
+
+.title_box_left{
+  margin-left: 36rpx;
+}
+
+#title_selected{
+  color: #1C1C1C;
+  font-size:32rpx;
+  font-weight:800;
+  border-bottom: 8rpx solid #03AD8F; 
+}
+
+
+/* 滚动 */
+
+.nav {
+  height: 104rpx;
+  width: 100%;
+  border-bottom: 1px solid #B4B4B4;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 104rpx;
+  font-size: 16px;
+  top: 0;
+  left: 0;
+  /* padding-left:36rpx;  */
+  background: #fff;
+  z-index: 99;
+}
+
+.nav-item {
+  margin-right: 80rpx;
+  margin-left: 36rpx;
+  display: inline-block;
+  text-align: center;
+}
+
+.active {
+  color: #1C1C1C;
+  font-size:32rpx;
+  font-weight:800;
+  position: relative;
+}
+
+.active:after{
+  content: "";
+  display: block;
+  width:100%;
+  height: 8rpx;
+  background: #03AD8F;
+  position: absolute;
+  bottom: 0;
+}
+
+.content-container {
+  width: 100%;
+  text-align: center;
+}
+
+
+/* 表格 */
+
+.table {
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding:20rpx auto;
+  align-items: center;
+  font-size: 28rpx;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+    padding-top:20rpx;
+    padding-bottom:20rpx;
+    border-bottom: 1px solid #B4B4B4;
+    border-right: 1px solid #B4B4B4;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  color: #C0C0C0;
+  padding-bottom:20rpx;
+  display: flex;
+  font-size:28rpx;
+  border-right: 1px solid #B4B4B4;
+  align-items: center;
+}
+
+
+.customer_list .title{
+  font-size:32rpx;
+  font-weight:500;
+  height:45rpx;
+  color: #D14B64;
+  margin: 30rpx 0;
+  line-height:32rpx
+}
+
+
+.table{
+  height: 100%;
+}
+.table .number {
+  width: 184rpx;
+}
+
+.table .company{
+  width: 234rpx;
+  padding-left:22rpx;
+  padding-right:22rpx;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+  color: #03AD8F;
+  text-decoration:underline;
+}
+
+.table .serial{
+  width: 108rpx;
+  padding-left:22rpx;
+  padding-right:22rpx;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+.table .time{
+  width: 221rpx;
+  border-right: 0;
+}
+
+.topnav{
+    position: fixed;
+    z-index:99;
+    background: #fff;
+    width: 100%;
+}
+
+

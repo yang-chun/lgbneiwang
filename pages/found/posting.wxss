@@ -1,0 +1,151 @@
+/* pages/post/posting.wxss */
+@import "../wikipedia/wikipedia.wxss";
+page{
+  background: #fff;
+}
+
+.top{
+  height: 24rpx;
+  background: #F8F8F8;
+}
+.text_box{
+  background: #FFF;
+}
+
+.text_box textarea{
+  margin-top:24rpx;
+  padding-top: 24rpx;
+  padding-left: 36rpx;
+  padding-right: 36rpx;
+  height: 250rpx;
+  width: 90%;
+letter-spacing:5rpx;
+  line-height: 50rpx;
+  
+}
+
+.placeholder_text{
+  color: #C0C0C0;
+  font-size: 32rpx;
+}
+
+.goods-item .image-list {
+    margin-left:36rpx;
+    border-bottom:1rpx solid #BFC7C5;
+}
+
+.goods-item .image-list:after {
+    clear: both;
+    content: " ";
+    display: table;
+}
+
+.goods-item .image-list image {
+    display: block;
+    width: 199rpx;
+    height: 199rpx;
+}
+
+.goods-item .image-list .image-picker {
+    width: 199rpx;
+    height: 199rpx;
+    border: 1rpx solid #ccc;
+    color: #ccc;
+}
+
+.goods-item .image-list .image-picker .choose__icon {
+    font-size: 56rpx;
+    margin-bottom: 6rpx;
+}
+
+.goods-item .image-list .image-picker .choose__text {
+    position: relative;
+}
+
+.goods-item .image-list .image-picker image{
+  width: 100rpx;
+  height: 100rpx;
+  margin:0 auto;
+  margin-top: 45rpx;
+}
+
+.goods-item .image-list .image-picker,
+.goods-item .image-list .image-preview {
+    margin-right: 30rpx;
+    float: left;
+    margin-bottom: 54rpx;
+}
+
+.goods-item .image-list .image-picker:nth-child(4n+0),
+.goods-item .image-list .image-preview:nth-child(4n+0) {
+    /* margin-right: 0; */
+}
+
+.goods-item .image-list .image-preview {
+    position: relative;
+}
+
+.goods-item .image-list .image-preview .image-delete {
+    position: absolute;
+    top: -15rpx;
+    right: -15rpx;
+    height: 42rpx;
+    width: 42rpx;
+    line-height: 42rpx;
+    background: rgba(0, 0, 0, 0.64);
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 22rpx;
+    z-index: 10;
+    text-align: center;
+}
+
+/* 标签 */
+.label_box{
+  margin-left:36rpx;
+  margin-top: 31rpx;
+  padding-bottom: 56rpx;
+}
+
+.label_box text{
+  color: #1C1C1C;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.label_box .theme{
+  margin-left:30rpx;
+}
+
+.label_list{
+  display: flex;
+  flex-wrap: wrap;
+  color: #C0C0C0;
+  margin-bottom: 100rpx;
+
+}
+
+.label{
+  padding: 8rpx 30rpx;
+  border: 1rpx solid #C0C0C0;
+  border-radius: 40rpx;
+  margin-right: 32rpx;
+  margin-top: 40rpx;
+}
+
+.selected{
+  border: 1rpx solid #1C1C1C;
+  color: #1C1C1C;
+}
+.button{
+  width: 100%!important;
+  border-radius: 0rpx;
+  background: #03AD8F;
+  color: #fff;
+  font-size:32rpx;
+  font-weight: 500;
+  padding: 32rpx;
+  position: fixed;
+  bottom: 0;
+}

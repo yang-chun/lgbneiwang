@@ -1,0 +1,239 @@
+/* pages/customer/customer.wxss */
+page{
+  background: #F8F8F8;
+}
+
+.Increase{
+  width: 678rpx;
+  height: 432rpx;
+  margin: 0 auto;
+  border-radius:4px;
+  margin-top:36rpx;
+  background: #fff;
+}
+.Increase_title{
+  width: 210rpx;
+  font-size:28rpx;
+  font-weight:800;
+  color: #1C1C1C;
+  margin: 0 auto;
+  padding-top:24rpx;
+  display: flex;
+}
+
+.Increase_title .image{
+    width: 36rpx;
+    height: 36rpx;
+    position: relative;
+    right: 10rpx;
+    background: #03AD8F;
+}
+.Increase_title image{
+  width: 32rpx;
+  height: 36rpx;
+  margin-left: 2rpx;
+}
+
+.Increase_2{
+  display: flex;
+  margin-top:56rpx;
+  /* background: #bbb; */
+}
+
+.Increase_2 .title{
+  font-size: 24rpx;
+  font-weight:500;
+  color:#3C3C3C;
+}
+
+.Increase_2 .number{
+  font-size: 36rpx;
+  font-weight:bold;
+  margin-top: 8rpx;
+  color: #03AD8F;
+}
+
+.Increase_2 .left{
+  width: 300rpx;
+  padding-left:72rpx;
+}
+.Increase_2 .right{
+  width: auto;
+  padding-left:72rpx;
+}
+
+/* 客户列表 */
+.customer_list{
+  width: 100%;
+  margin-top: 36rpx;
+  background: #fff;
+  margin-bottom: 100rpx;
+}
+
+.title_box {
+  width: 100%;
+  height: 104rpx;
+  display: flex;
+  border-bottom: 1px solid #B4B4B4;
+}
+.title_box view{
+  line-height: 104rpx;
+  margin-right: 80rpx;
+  font-size:28rpx;
+  font-weight:500;
+  color: #3C3C3C;
+}
+
+.title_box_left{
+  margin-left: 36rpx;
+}
+
+#title_selected{
+  color: #1C1C1C;
+  font-size:32rpx;
+  font-weight:800;
+  border-bottom: 8rpx solid #03AD8F; 
+}
+
+
+/* 滚动 */
+
+.nav {
+  height: 104rpx;
+  width: 100%;
+  border-bottom: 1px solid #B4B4B4;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 104rpx;
+  font-size: 16px;
+  top: 0;
+  left: 0;
+  /* padding-left:36rpx;  */
+  background: #fff;
+  z-index: 99;
+}
+
+.nav-item {
+  margin-right: 56rpx;
+  margin-left: 36rpx;
+  display: inline-block;
+  text-align: center;
+}
+
+.active {
+  color: #1C1C1C;
+  font-size:32rpx;
+  font-weight:800;
+  position: relative;
+}
+
+.active:after{
+  content: "";
+  display: block;
+  width:100%;
+  height: 8rpx;
+  background: #03AD8F;
+  position: absolute;
+  bottom: 0;
+}
+
+.content-container {
+  width: 100%;
+  text-align: center;
+}
+
+
+/* 表格 */
+
+.table {
+  border: 0px solid darkgray;
+  background: #fff;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding:20rpx auto;
+  align-items: center;
+  font-size: 28rpx;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+    padding-top:20rpx;
+    padding-bottom:20rpx;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  color: #1C1C1C;
+  padding-bottom:20rpx;
+  display: flex;
+  font-size:28rpx;
+  font-weight:bold;
+  align-items: center;
+}
+
+.table{
+  padding-top: 36rpx;
+  height: 100%;
+}
+.table .number {
+  width: 184rpx;
+}
+
+.table .company1{
+  width: 419rpx;
+  padding-left:22rpx;
+  padding-right:22rpx;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+  color: #03AD8F;
+  text-align: left;
+  /* text-decoration:underline; */
+}
+
+.table .company{
+  width: 234rpx;
+  padding-left:22rpx;
+  padding-right:22rpx;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+  color: #03AD8F;
+  /* text-decoration:underline; */
+}
+
+.table .serial{
+  width: 108rpx;
+
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+.table .time{
+  width: 221rpx;
+  border-right: 0;
+}
+
+.topnav{
+    position: fixed;
+    z-index:99;
+    /* background: #fff; */
+    width: 100%;
+}
+
+.topnav2{
+  margin-top: 104rpx;
+}
+
+
